@@ -212,6 +212,8 @@ export function VirtualTable({
 								className="size-3.5 cursor-pointer accent-primary"
 							/>
 						</th>
+						{/* Detail button header */}
+						<th className="w-8 border-b border-border" />
 						{visibleCols.map((col) => {
 							const isActive = sort?.field === col;
 							const { prefix, name } = formatColumnHeader(col);
@@ -243,8 +245,6 @@ export function VirtualTable({
 								</th>
 							);
 						})}
-						{/* Detail button header */}
-						<th className="w-8 border-b border-border" />
 					</tr>
 				</thead>
 				<tbody>
