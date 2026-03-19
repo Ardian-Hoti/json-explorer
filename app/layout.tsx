@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/theme-provider";
+import PortfolioBadge from "@/components/portfolioBadge";
 
 const _inter = Inter({ subsets: ["latin"] });
 const _jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
@@ -37,6 +38,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
+			<div className=" bg-transparent p-0 m-o">
+				<PortfolioBadge />
+			</div>
 			<body className="font-sans antialiased">
 				<Providers>{children}</Providers>
 			</body>
